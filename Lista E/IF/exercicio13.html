@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <h3>Limite do Elevador</h3>
+    Entre com o peso total presente no elevador
+    <input type="text" id="peso" placeholder="Peso Total">
+<br><br>
+    <button onclick="verificar()">Ligar o Elevador</button>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        if (peso.value < 500){
+            alert('Elevador vai se mover');
+        } else {
+            alert('Alguém precisa descer do elevador');
+        }
+    };
+</script>

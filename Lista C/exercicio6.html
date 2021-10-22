@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <h3>Radiciando</h3>
+    Entre com o radicando
+    <input type="text" id="radicando" placeholder="radicando">
+<br>
+    Entre com o índice
+    <input type="text" id="indice" placeholder="índice">
+<br>
+    <button onclick="radiciar()">Calcular Raiz</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function radiciar(){
+        div_msg.innerHTML = `A ${indice.value}ª raiz de ${radicando.value} dá ${radicando.value ** (1 / indice.value)}`
+    };
+</script>

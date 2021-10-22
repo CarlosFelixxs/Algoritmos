@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <h3>Números cabalísticos de Juliana Morosa</h3>
+    <h4>Você já clicou <span id="contagem">0</span> vezes</h4>
+    <button onclick="clique()">Clique cabalístico</button>
+</body>
+</html>
+
+<script>
+    var ax_contagem = 0;
+
+    function clique(){
+        ax_contagem ++;
+        contagem.innerHTML = ax_contagem;
+
+        if (ax_contagem == 3 || ax_contagem == 4 || ax_contagem == 7 || ax_contagem == 10) {
+            alert(`Você clicou ${ax_contagem} vezes e Juliana gosta desse número!`);
+        }
+    };
+</script>

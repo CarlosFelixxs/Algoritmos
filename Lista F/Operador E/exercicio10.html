@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+<div id="tela1">
+    <h3>Parâmetro da vaga de piloto</h3>
+    Entre com a altura mínima desejada
+    <input type="text" id="minima" placeholder="Altura Mínima">
+<br><br>
+    Entre com a altura máxima desejada
+    <input type="text" id="maxima" placeholder="Altura Máxima">
+<br><br>
+    <button onclick="validar_altura()">Definir Parâmetros</button>
+</div>
+
+<div id="tela2" style="display: none;">
+    <h3>Dados do candidato</h3>
+    Entre com o nome do candidato
+    <input type="text" id="nome" placeholder="Nome do Candidato">
+<br><br>
+    Entre com a altura do canditado
+    <input type="text" id="altura" placeholder="Altura do Candidato">
+<br><br>
+    <button onclick="candidatar()">Candidatar</button>
+<br><br>
+    <div id="div_msg"></div>
+</div>
+</body>
+</html>
+
+<script>
+    function validar_altura(){
+        if (minima.value > 1 && minima.value < maxima.value) {
+            tela1.style.display = 'none';
+            tela2.style.display = 'block';
+        } else {
+            alert('A altura mínima precisa ser maior que 1m e não pode ser maior que a máxima - Correção necessária para prosseguir');
+        };
+    };
+
+    function candidatar(){
+        if (altura.value >= minima.value && altura.value <= maxima.value) {
+            div_msg.innerHTML += `O candidato ${nome.value} com altura de ${altura.value} participará do processo de seleção de piloto<br><br>`;
+        } else {
+            div_msg.innerHTML += `Infelizmente, o candidato ${nome.value} com altura de ${altura.value} não atende aos requisitos<br><br>`;
+        }
+    };
+</script>

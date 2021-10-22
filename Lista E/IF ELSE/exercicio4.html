@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h3>Análise de Frequência</h3>
+    Entre com a frequência do aluno
+    <input type="text" id="freq" placeholder="Frequência">%
+<br><br>
+    <button onclick="analisar()">Analisar frequência</button>
+<br><br>    
+    <img id="aluno" src="" alt="" width="200px">
+</body>
+</html>
+
+<script>
+    function analisar() {
+        if (freq.value < 50) {
+            aluno.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-fEazTgNTSR31caAc2F4Br27Op6NoVhJ2Q&usqp=CAU"
+        } else {
+            aluno.src = "https://redacaohipercerebrohome.files.wordpress.com/2020/04/estudioso.jpg?w=420"
+        };
+    };
+</script>

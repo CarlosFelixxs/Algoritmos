@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h3>Tabuada</h3>
+    <select id="num" onchange="tabuar()">
+        <option value="">Selecione um Número</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+<br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function tabuar(){
+    div_msg.innerHTML = 
+    `<br>${num.value} x 0 = ${num.value*0}<br>
+    <br>${num.value} x 1 = ${num.value*1}<br>
+    <br>${num.value} x 2 = ${num.value*2}<br>
+    <br>${num.value} x 3 = ${num.value*3}<br>
+    <br>${num.value} x 4 = ${num.value*4}<br>
+    <br>${num.value} x 5 = ${num.value*5}<br>
+    <br>${num.value} x 6 = ${num.value*6}<br>
+    <br>${num.value} x 7 = ${num.value*7}<br>
+    <br>${num.value} x 8 = ${num.value*8}<br>
+    <br>${num.value} x 9 = ${num.value*9}<br>
+    <br>${num.value} x 10 = ${num.value*10}<br>`
+};
+</script>

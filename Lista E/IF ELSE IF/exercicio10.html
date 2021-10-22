@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h3>Banco SPTO</h3>
+    Entre com o seu nome
+    <input type="text" id="nome" placeholder="Nome">
+<br>
+    Entre com o seu saldo
+    <input type="text" id="conta" placeholder="Saldo">
+<br><br>
+    <button onclick="verificar()">Verificar Conta</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var saldo = Number(conta.value);  
+
+        if (saldo < 0){
+            div_msg.innerHTML = `Com o saldo de R$ ${saldo.toFixed(2)} o cliente ${nome.value} está com saldo devedor`;
+        } else if (saldo <= 2000){
+            div_msg.innerHTML = `Com o saldo de R$ ${saldo.toFixed(2)} o cliente ${nome.value} está com saldo NORMAL`;
+        } else if (saldo <= 5000){
+            div_msg.innerHTML = `Com o saldo de R$ ${saldo.toFixed(2)} o cliente ${nome.value} está com saldo ACIMA DA MÉDIA`;
+        } else {
+            div_msg.innerHTML = `Com o saldo de R$ ${saldo.toFixed(2)} o cliente ${nome.value} TEM PERFIL DE INVESTIDOR`;
+        };
+    };
+</script>

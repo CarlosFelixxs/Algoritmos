@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <!--Talvez seja alterado futuramente para integração com Sensor LM35-->
+    <h3>Temperaturas e o ser Humano</h3>
+    Entre com a temperatura
+    <input onchange="analisar()" type="text" id="temp">°C
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        if (temp.value > 31) {
+            div_msg.innerHTML = "Calor escaldante";
+        } else if (temp.value > 24) {
+            div_msg.innerHTML = "Com Calor";
+        } else if (temp.value > 21) {
+            div_msg.innerHTML = "Confortável";            
+        } else if (temp.value >= 14) {
+            div_msg.innerHTML = "Com Frio";            
+        } else {
+            div_msg.innerHTML = "Congelante";            
+        };
+    };
+</script>

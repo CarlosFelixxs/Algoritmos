@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+    <h3>Análise de financiamento para casa próprias</h3>
+    Entre com a renda familiar
+    <input type="text" id="renda" placeholder="Renda Familiar">
+<br>
+    Entre com o valor da prestação
+    <input type="text" id="prestacao" placeholder="Valor da Prestação">
+<br><br>
+    <button onclick="verificar()">Verificar Financiamento</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var ax_media = (prestacao.value / renda.value) * 100;
+
+        div_msg.innerHTML = `A prestação corresponde a ${ax_media.toFixed(2)}% da renda familiar`;
+    
+        if (ax_media > 30){
+            div_msg.innerHTML += `<br><br><b style="color: red;">Será necessário complementar a renda familiar</b> `
+    };
+};
+</script>

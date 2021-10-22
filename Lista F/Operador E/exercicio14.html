@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+
+<div id="tela1">
+    <h3>Parâmetro da vaga de piloto</h3>
+    Entre com a altura mínima desejada
+    <input type="text" id="minima_piloto" placeholder="Altura Mínima">
+<br><br>
+    Entre com a altura máxima desejada
+    <input type="text" id="maxima_piloto" placeholder="Altura Máxima">
+<br><br>
+    <h3>Parâmetro da vaga de jogador de basquete</h3>
+    Entre com a altura mínima desejada
+    <input type="text" id="minima_basquete" placeholder="Altura Mínima">
+<br><br>
+    Entre com a altura máxima desejada
+    <input type="text" id="maxima_basquete" placeholder="Altura Máxima">
+<br><br>
+    <button onclick="validar_altura()">Definir Parâmetros</button>
+</div>
+
+<div id="tela2" style="display: none;">
+    <h3>Processo de Seleção de Novos Atletas</h3>
+    <h4 id="h_piloto"></h4>
+    <h4 id="h_basquete"></h4>
+    Entre com o nome do candidato
+    <input type="text" id="nome" placeholder="Nome do Candidato">
+<br><br>
+    Entre com a altura do canditado
+    <input type="text" id="altura" placeholder="Altura do Candidato">
+<br><br>
+        Entre com a modalidade do candidato
+        <select id="modalidade">
+            <option value="">Selecione uma modalidade</option>
+            <option value="piloto">Piloto</option>
+            <option value="basquete">Jogador de Basquete</option>
+        </select>
+<br><br>
+    <button onclick="candidatar()">Candidatar</button>
+<br><br>
+    <div id="div_msg"></div>
+</div>
+</body>
+</html>
+
+<script>
+    function validar_altura(){
+        if (minima_piloto.value > 1 && minima_piloto.value < maxima_piloto.value && minima_basquete.value > 1.5 && minima_basquete.value < maxima_basquete.value) {
+            
+            h_piloto.innerHTML = `Critério de seleção de piloto - altura entre ${Number(minima_piloto.value).toFixed(2)}m até ${Number(maxima_piloto.value).toFixed(2)}m`;
+           
+            h_basquete.innerHTML = `Critério de seleção de jogador de basquete - altura entre ${Number(minima_basquete.value).toFixed(2)}m até ${Number(maxima_basquete.value).toFixed(2)}m`;
+           
+            tela1.style.display = 'none';
+            tela2.style.display = 'block';
+        
+        } else {
+            alert('A altura mínima precisa ser maior que 1m (para piloto) e 1.5m (para jogador de basquete) e não podem ser maior que a máxima - Correção necessária para prosseguir');
+        };
+    };
+
+    function candidatar(){
+        if (modalidade.value == 'piloto' && altura.value >= minima_piloto.value && altura.value <= maxima_piloto.value) {
+            div_msg.innerHTML += `O candidato ${nome.value} com altura de ${altura.value} participará do processo de seleção de piloto<br><br>`;
+        } else if (modalidade.value == 'piloto') {
+            div_msg.innerHTML += `Infelizmente, o candidato ${nome.value} com altura de ${altura.value} não atende aos requisitos<br><br>`;
+        } else if (modalidade.value == 'basquete' && altura.value >= minima_basquete.value && altura.value <= maxima_basquete.value) {
+            div_msg.innerHTML += `O candidato ${nome.value} com altura de ${altura.value} participará do processo de seleção de jogador de basquete<br><br>`;
+        } else if (modalidade.value == 'basquete') {
+            div_msg.innerHTML += `Infelizmente, o candidato ${nome.value} com altura de ${altura.value} não atende aos requisitos<br><br>`;
+        };
+        // Caso queira limpar os campos de input e seleção a cada candidatura
+        // nome.value = '';
+        // altura.value = '';
+        // modalidade.value = '';
+    };
+</script>

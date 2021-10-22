@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <h3>Não engorde na quarentena</h3>
+    Entre com a quantidade de pães consumidos por dia
+    <input type="text" id="pao" placeholder="Pães">
+<br>
+    Entre com a quantidade de pacotes de bolacha recheada consumidos por dia
+    <input type="text" id="bolacha" placeholder="Bolachas Recheadas">
+<br>
+    Entre com a quantidade de copos de achocolatado consumidos por dia
+    <input type="text" id="achocolatado" placeholder="Achocolatados">
+<br><br>
+    <button onclick="verificar()">Verificar Calorias</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var total = Number(pao.value * 50) + Number (bolacha.value * 80) + Number(achocolatado.value * 70);
+
+        if (total > 400) {
+            div_msg.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;
+        } else if (total >= 200) {
+            div_msg.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após a quarentena!`;
+        } else {
+            div_msg.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+        };
+    };
+</script>

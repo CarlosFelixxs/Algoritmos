@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h3>Análise Familiar</h3>
+    Entre com a quantidade de filhos
+    <input type="text" id="qtd_filhos" placeholder="Quantidade de Filhos">
+<br><br>
+    <button onclick="analisar()">Analisar família</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        
+        div_msg.innerHTML = '';
+
+        if (qtd_filhos.value >=1) {
+            div_msg.innerHTML += `<br>Não tem TV<br>`
+        }
+        if (qtd_filhos.value >=2) {
+            div_msg.innerHTML += `<br>Não tem internet<br>`
+        }
+        if (qtd_filhos.value >=3) {
+            div_msg.innerHTML += `<br>Não tem video game<br>`
+        }
+        if (qtd_filhos.value >=4) {
+            div_msg.innerHTML += `<br>Não tem Netflix<br>`
+        }
+    };
+</script>

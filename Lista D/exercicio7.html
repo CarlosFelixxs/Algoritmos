@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <h3>Escudos de Times</h3>
+    <select id="time">
+        <option value="">Selecione um time</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsKnS4AIHjS_do8DHgNImkBA31pA4j8XrK593VYKsOMtCQ2IwqJpxc5YNXCs2ZbXgQv30&usqp=CAU">Santos</option>
+        <option value="https://img.elo7.com.br/product/original/29BC368/adesivo-escudo-sao-paulo-0-54cm-x-0-40cm.jpg">São Paulo</option>
+        <option value="https://i.pinimg.com/236x/d4/aa/cd/d4aacd32d937f8acd8b8c267f29fca2e.jpg">Corinthians</option>
+        <option value="https://lh3.googleusercontent.com/-Q-V2qmBD5gM/Vamep0Bd2YI/AAAAAAAADwY/1Ei55AbM3L4/s714/palmeiras.png">Palmeiras</option>
+    </select>
+<br><br>
+    <button onclick="escudar()">Ver escudo</button>
+<br><br><br>
+    <img id="escudo" src="" style="height: 10px;"> <!-- pode aumentar o tamanho da imagem... -->
+</body>
+</html>
+
+<script>
+    function escudar(){
+        escudo.src = time.value
+};
+</script>

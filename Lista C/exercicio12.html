@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <h3>Valor guardado no cofrinho: R$ <b id="div_status">0,00</b></h3>
+
+    Quantidade de depósitos feitos:  <b id=b_qtd_dep>0</b>
+<br>
+    Quantidade de retiradas feitas: <b id="b_qtd_ret">0</b>
+<br><br>
+    Entre com o valor a ser depositado:
+    <input type="text" id="deposito" placeholder="valor do depósito">
+<br><br>
+    <button onclick="add_deposito()">Depositar</button>
+    <button onclick="ret_deposito()">Tirar toda a grana</button>
+    
+</body>
+</html>
+
+<script>
+    var total_cofrin = 0;
+    var qtd_depositos = 0;
+    var qtd_retiradas = 0;
+
+    function add_deposito(){
+        total_cofrin = Number(total_cofrin) + Number(deposito.value);
+        div_status.innerHTML = total_cofrin.toFixed(2);
+        
+        qtd_depositos +=1;
+        b_qtd_dep.innerHTML = qtd_depositos;
+
+        deposito.value = '';
+};
+    function ret_deposito(){
+        total_cofrin = 0;
+        div_status.innerHTML = total_cofrin.toFixed(2);
+
+        qtd_retiradas += 1;
+        b_qtd_ret.innerHTML = qtd_retiradas;
+
+        deposito.value = '';
+};
+
+</script>

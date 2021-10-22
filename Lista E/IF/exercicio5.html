@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h3>Calculadora de Bebidas</h3>
+    Entre com a quantidade de latinhas de refrigerante tomadas por dia
+    <input type="text" id="latinhas" placeholder="latinhas por dia">
+<br><br>
+    <button onclick="calc_refris()">Quantos refris?</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calc_refris(){
+        var total_refris = latinhas.value * 365;
+
+        div_msg.innerHTML = `Você consome ${total_refris} latinhas por ano`;
+
+        if (total_refris >= 500) {
+            div_msg.innerHTML += '<br><br> Cuidado com a diabetes!'
+        };
+
+        latinhas.value = '';
+    };
+</script>

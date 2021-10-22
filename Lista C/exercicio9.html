@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+    <h3>Progressão de infectados pelo SkolVírus</h3>
+    Entre com a quantidade de infectados atualmente
+    <input type="text" id="infectados" placeholder="Infectados">
+<br><br>
+    <button onclick="ontem()">Quantas pessoas infectadas ontem</button>
+<br><br>
+    <div id="div_msg1"><br></div>
+<br><br>
+    <button onclick="amanha()">Quantas pessoas infectadas amanhã</button>
+<br><br>
+    <div id="div_msg2"><br></div>
+<br><br>
+    <button onclick="mes()">Quantas pessoas infectadas daqui a 1 mês</button>
+<br><br>
+    <div id="div_msg3"><br></div>
+</body>
+</html>
+
+<script>
+    function ontem(){
+        div_msg1.innerHTML = `Ontem haviam ${infectados.value - 35} pessoas infectadas pelo SkolVírus`;
+    };
+    function amanha(){
+        div_msg2.innerHTML = `Amanhã haverão ${Number(infectados.value) + Number(35)} pessoas infectadas pelo SkolVírus`;
+    };
+    function mes(){
+        div_msg3.innerHTML = `Daqui a 1 mês haverão ${Number(infectados.value) + Number(35*30)} pessoas infectadas pelo SkolVírus`;
+    };
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <h3>Calculando o poder de compra</h3>
+    Entre com o valor economizado
+    <input type="text" id="valor" placeholder="Total Economizado">
+<br><br>
+    <button onclick="calcular()">Poder de Compra</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        if (valor.value <= 0) {
+            div_msg.innerHTML = `Nada de Compras :(`;
+        } else if (valor.value < 100){
+            div_msg.innerHTML = `Viagem de ida e volta pra Praia Grande`;
+        } else if (valor.value < 4000) {
+            div_msg.innerHTML = `Viagem de ida e volta pra Praia Grande <br><br> Um boa moto usada`;
+        } else {
+            div_msg.innerHTML = `Viagem de ida e volta pra Praia Grande <br><br> Um boa moto usada<br><br>Mais alguma bobagem legal`;
+        };
+    };
+</script>

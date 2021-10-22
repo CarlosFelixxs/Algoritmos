@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    <h3>Agenda de Entregas</h3>
+    <div id="dados">
+        Entre com o número de entregas na ZL:
+        <input type="text" id="zl_ent" placeholder="Zona Leste">
+<br>    
+        Entre com o número de entregas na ZS:
+        <input type="text" id="zs_ent" placeholder="Zona Sul">
+<br>    
+        Entre com o número de entregas na ZN:
+        <input type="text" id="zn_ent" placeholder="Zona Norte">
+<br>
+        Entre com o número de entregas na ZO:
+        <input type="text" id="zo_ent" placeholder="Zona Oeste">
+<br>
+        <button onclick="agenda()">Carregar agenda</button>
+    </div>
+
+    <div id="div_msg" style="display: none;"></div>
+<br><br>
+    <div id="div_but" style="display: none;">
+        <button onclick="zl_but()">Entregar ZL</button>
+        <button onclick="zs_but()">Entregar ZS</button>
+        <button onclick="zn_but()">Entregar ZN</button>
+        <button onclick="zo_but()">Entregar ZO</button>
+    </div>
+</body>
+</html>
+
+<script>
+    var zl_total = 0;
+    var zs_total = 0;
+    var zn_total = 0;
+    var zo_total = 0;
+    var total_entregas = 0;
+
+    function agenda(){
+        zl_total = zl_ent.value;
+        zs_total = zs_ent.value;
+        zn_total = zn_ent.value;
+        zo_total = zo_ent.value;
+        total_entregas = Number(zl_total)+Number(zs_total)+Number(zn_total)+Number(zo_total);
+         
+        div_msg.innerHTML = 
+        `Entregas ZL: ${zl_total}<br>
+        Entregas ZS: ${zs_total}<br>
+        Entregas ZN: ${zn_total}<br>
+        Entregas ZO: ${zo_total}<br>
+        Entregas Restantes: ${total_entregas}`
+        
+        dados.style.display = 'none'
+        div_msg.style.display = 'block';
+        div_but.style.display = 'block';
+    };
+    function zl_but(){
+        zl_total --;
+        total_entregas = Number(zl_total)+Number(zs_total)+Number(zn_total)+Number(zo_total)
+        div_msg.innerHTML = 
+        `Entregas ZL: ${zl_total}<br>
+        Entregas ZS: ${zs_total}<br>
+        Entregas ZN: ${zn_total}<br>
+        Entregas ZO: ${zo_total}<br>
+        Entregas Restantes: ${total_entregas}`
+    };
+    function zs_but(){
+        zs_total --;
+        total_entregas = Number(zl_total)+Number(zs_total)+Number(zn_total)+Number(zo_total)
+        div_msg.innerHTML = 
+        `Entregas ZL: ${zl_total}<br>
+        Entregas ZS: ${zs_total}<br>
+        Entregas ZN: ${zn_total}<br>
+        Entregas ZO: ${zo_total}<br>
+        Entregas Restantes: ${total_entregas}`
+    };
+    function zn_but(){
+        zn_total --;
+        total_entregas = Number(zl_total)+Number(zs_total)+Number(zn_total)+Number(zo_total)
+        div_msg.innerHTML = 
+        `Entregas ZL: ${zl_total}<br>
+        Entregas ZS: ${zs_total}<br>
+        Entregas ZN: ${zn_total}<br>
+        Entregas ZO: ${zo_total}<br>
+        Entregas Restantes: ${total_entregas}`
+    };
+    function zo_but(){
+        zo_total --;
+        total_entregas = Number(zl_total)+Number(zs_total)+Number(zn_total)+Number(zo_total)
+        div_msg.innerHTML = 
+        `Entregas ZL: ${zl_total}<br>
+        Entregas ZS: ${zs_total}<br>
+        Entregas ZN: ${zn_total}<br>
+        Entregas ZO: ${zo_total}<br>
+        Entregas Restantes: ${total_entregas}`
+    };
+</script>

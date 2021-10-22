@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <h3>Estações do Ano</h3>
+    <select id="estacao" onchange="estacionar()">
+        <option value="">Escolha uma estação</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRli3hr_k0FdBtbvxLDbrL7YXu5ddE6GWHW1obpwt6dKMOU9W0ILr3aVt1MAhPt_Y4xleQ&usqp=CAU">Primavera</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSA6MnbcA9o51_5RbNSTFfzCD-ZSowzZGgGg&usqp=CAU">Verão</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfhNgOgNbhlDVLpJqM_c7hy4FzslrxQONlunKHFJoWaS_FqaTA4P4EcNWUwPZO8rLRlaM&usqp=CAU">Outono</option>
+        <option value="https://conhecimentocientifico.r7.com/wp-content/uploads/2020/04/inverno-datas-e-caracteristicas-1024x576.jpg">Inverno</option>
+    </select>
+<br><br>
+    <img id="estacao_img" src="" style="width: 200px;">
+</body>
+</html>
+
+<script>
+    function estacionar(){
+        estacao_img.src = `${estacao.value}`
+};
+</script>

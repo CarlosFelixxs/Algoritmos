@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <h3>Pizza Calculator</h3>
+    Entre com o sabor da pizza
+    <input type="text" id="sabor" placeholder="Sabor da Pizza" autofocus>
+<br><br>
+    <select id="ingrediente1" onchange="ilustrar1()">
+        <option value="">Primeiro Igrediente</option>
+        <option value="queijo">Queijo</option>
+        <option value="presunto">Presunto</option>
+        <option value="ovo">Ovo</option>
+        <option value="palmito">Palmito</option>
+        <option value="frango">Frango</option>
+        <option value="catupiry">Catupiry</option>
+    </select>
+<br>
+    <img id="foto1" src="" style="height: 200px;">
+<br>
+    <select id="ingrediente2" onchange="ilustrar2()">
+        <option value="">Segundo Igrediente</option>
+        <option value="queijo">Queijo</option>
+        <option value="presunto">Presunto</option>
+        <option value="ovo">Ovo</option>
+        <option value="palmito">Palmito</option>
+        <option value="frango">Frango</option>
+        <option value="catupiry">Catupiry</option>
+    </select>
+<br>
+    <img id="foto2" src="" style="height: 200px;">
+<br>
+    <select id="ingrediente3" onchange="ilustrar3()">
+        <option value="">Terceiro Igrediente</option>
+        <option value="queijo">Queijo</option>
+        <option value="presunto">Presunto</option>
+        <option value="ovo">Ovo</option>
+        <option value="palmito">Palmito</option>
+        <option value="frango">Frango</option>
+        <option value="catupiry">Catupiry</option>
+    </select>
+<br>
+    <img id="foto3" src="" style="height: 200px;">
+<br>
+    <button onclick="calcular()">Calcular preço da pizza</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function ilustrar1() {
+        if (ingrediente1.value == 'queijo'){
+            foto1.src = 'https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/17179/medium/queijo-parmesao-tradpckg_76439.jpg';
+        };
+        if (ingrediente1.value == 'presunto') {
+            foto1.src = 'https://compre.dellygil.com.br/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/2/_/2.jpg';
+        };
+        if (ingrediente1.value == 'ovo') {
+            foto1.src = 'https://www.webrun.com.br/wp-content/uploads/2020/07/ovos-feed-hduwd.jpg';
+        };
+        if (ingrediente1.value == 'palmito') {
+            foto1.src = 'https://empeaconsultoria.com.br/wp-content/uploads/2020/03/PADR%C3%83O-NOVO-SITE-6.jpg';
+        };
+        if (ingrediente1.value == 'frango') {
+            foto1.src = 'http://www.hojetemfrango.com.br/wp-content/uploads/2019/03/shutterstock_1110380072.jpg';
+        };
+        if (ingrediente1.value == 'catupiry') {
+            foto1.src = 'http://pocoscom.com/wp-content/uploads/2017/02/catupiry-1.jpg';
+        };
+    };
+    function ilustrar2() {
+        if (ingrediente2.value == 'queijo'){
+            foto2.src = 'https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/17179/medium/queijo-parmesao-tradpckg_76439.jpg';
+        };
+        if (ingrediente2.value == 'presunto') {
+            foto2.src = 'https://compre.dellygil.com.br/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/2/_/2.jpg';
+        };
+        if (ingrediente2.value == 'ovo') {
+            foto2.src = 'https://www.webrun.com.br/wp-content/uploads/2020/07/ovos-feed-hduwd.jpg';
+        };
+        if (ingrediente2.value == 'palmito') {
+            foto2.src = 'https://empeaconsultoria.com.br/wp-content/uploads/2020/03/PADR%C3%83O-NOVO-SITE-6.jpg';
+        };
+        if (ingrediente2.value == 'frango') {
+            foto2.src = 'http://www.hojetemfrango.com.br/wp-content/uploads/2019/03/shutterstock_1110380072.jpg';
+        };
+        if (ingrediente2.value == 'catupiry') {
+            foto2.src = 'http://pocoscom.com/wp-content/uploads/2017/02/catupiry-1.jpg';
+        };
+    };
+    function ilustrar3() {
+        if (ingrediente3.value == 'queijo'){
+            foto3.src = 'https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/17179/medium/queijo-parmesao-tradpckg_76439.jpg';
+        };
+        if (ingrediente3.value == 'presunto') {
+            foto3.src = 'https://compre.dellygil.com.br/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/2/_/2.jpg';
+        };
+        if (ingrediente3.value == 'ovo') {
+            foto3.src = 'https://www.webrun.com.br/wp-content/uploads/2020/07/ovos-feed-hduwd.jpg';
+        };
+        if (ingrediente3.value == 'palmito') {
+            foto3.src = 'https://empeaconsultoria.com.br/wp-content/uploads/2020/03/PADR%C3%83O-NOVO-SITE-6.jpg';
+        };
+        if (ingrediente3.value == 'frango') {
+            foto3.src = 'http://www.hojetemfrango.com.br/wp-content/uploads/2019/03/shutterstock_1110380072.jpg';
+        };
+        if (ingrediente3.value == 'catupiry') {
+            foto3.src = 'http://pocoscom.com/wp-content/uploads/2017/02/catupiry-1.jpg';
+        };
+    };
+    function calcular(){
+        var ax_ig1 = 0;
+        var ax_ig2 = 0;
+        var ax_ig3 = 0;
+
+        if (ingrediente1.value == 'queijo'){
+            ax_ig1 = 10;
+        };
+        if (ingrediente1.value == 'presunto') {
+            ax_ig1 = 11;
+        };
+        if (ingrediente1.value == 'ovo') {
+            ax_ig1 = 12;
+        };
+        if (ingrediente1.value == 'palmito') {
+            ax_ig1 = 13;
+        };
+        if (ingrediente1.value == 'frango') {
+            ax_ig1 = 14;
+        };
+        if (ingrediente1.value == 'catupiry') {
+            ax_ig1 = 15;
+        };
+
+        if (ingrediente2.value == 'queijo'){
+            ax_ig2 = 10;
+        };
+        if (ingrediente2.value == 'presunto') {
+            ax_ig2 = 11;
+        };
+        if (ingrediente2.value == 'ovo') {
+            ax_ig2 = 12;
+        };
+        if (ingrediente2.value == 'palmito') {
+            ax_ig2 = 13;
+        };
+        if (ingrediente2.value == 'frango') {
+            ax_ig2 = 14;
+        };
+        if (ingrediente2.value == 'catupiry') {
+            ax_ig2 = 15;
+        };
+
+        if (ingrediente3.value == 'queijo'){
+            ax_ig3 = 10;
+        };
+        if (ingrediente3.value == 'presunto') {
+            ax_ig3 = 11;
+        };
+        if (ingrediente3.value == 'ovo') {
+            ax_ig3 = 12;
+        };
+        if (ingrediente3.value == 'palmito') {
+            ax_ig3 = 13;
+        };
+        if (ingrediente3.value == 'frango') {
+            ax_ig3 = 14;
+        };
+        if (ingrediente3.value == 'catupiry') {
+            ax_ig3 = 15;
+        };
+
+        var ax_total = Number(ax_ig1) + Number(ax_ig2) + Number(ax_ig3);
+
+        div_msg.innerHTML = `<b>A pizza sabor ${sabor.value} vai custar um total de <u>R$ ${ax_total.toFixed(2)}</u></b>`
+    };
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <h3>Análise de Temperatura</h3>
+    Entre com a temperatura do ambiente
+    <input type="text" id="temp" placeholder="Temperatura">°C
+<br><br>
+    <button onclick="verificar()">Verificar clima</button>
+<br><br>
+    <img id="alimento" src="" alt="" width="200px">
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        if (temp.value < 10) {
+            alimento.src = 'https://static.ndmais.com.br/2012/05/03-05-2012-09-22-18-040512-frutas-vermelhas-foto-wallpaper.pipxx.com.jpg';
+            div_msg.innerHTML = 'Apropriado para conserva';
+        } else {
+            alimento.src = 'https://media.gazetadopovo.com.br/2009/03/f3733975da3b4e4f2eea46eee12e9e6f-gpMedium.jpg';
+            div_msg.innerHTML = 'Inapropriado para conserva';
+        }
+    }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h3>Classes Sociais de Tuvalu</h3>
+    Entre com a renda familiar mensal
+    <input onchange="analisar()" type="text" id="renda" placeholder="Renda Mensal">
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar() {
+        if (renda.value > 9500) {
+            div_msg.innerHTML = "Classe A";
+        } else if (renda.value > 2500) {
+            div_msg.innerHTML = "Classe B";
+        } else if (renda.value > 900) {
+            div_msg.innerHTML = "Classe C";
+        } else if (renda.value > 250) {
+            div_msg.innerHTML = "Classe D";
+        } else {
+            div_msg.innerHTML = "Classe E";
+        };  
+    };
+</script>

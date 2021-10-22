@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17</title>
+</head>
+<body>
+    <h2>Você merece a mão de minha filha???</h2>
+    Entre com a quantidade de anos trabalhados para mim
+    <input type="text" id="anos" placeholder="Anos trabalhados">
+<br><br>
+    Entre com a quantidade de quilos de trigo por hectare rendido
+    <input type="text" id="quilos" placeholder="Quilos por hectare">
+<br><br>
+    Entre com a quantidade de faltas por motivos de doença
+    <input type="text" id="faltas" placeholder="Faltas">
+<br><br>
+    <button onclick="verificar()">Deu mactch?</button>
+<br><br>
+    <h2 id="h_msg"></h2>
+    <img id="foto" src="" style="height: 300px;">
+</body>
+</html>
+
+<script>
+    function verificar(){
+        if (anos.value >= 5 && quilos.value >= 300 && faltas.value <= 5) {
+            h_msg.innerHTML = `Minha filha será sua!`;
+            foto.src = 'https://media1.giphy.com/media/vTfFCC3rSfKco/giphy.gif?cid=dc79c3575b15520c4e6d544749ec7238';
+        } else {
+            h_msg.innerHTML = `Deu ruim! Trabalhe mais 2 anos`;
+            foto.src = 'https://noticiasdatv.uol.com.br/media/_versions/everybody-hates-chris-julius-dia-dos-pais_fixed_large.jpg';
+        };
+    };
+</script>

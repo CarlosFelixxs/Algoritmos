@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17</title>
+</head>
+<body>
+    <h3>Pizza Rãti</h3>
+    Entre com a distância em km da sua casa até a pizzaria
+    <input type="text" id="dist" placeholder="Distância em km">
+<br><br>
+    <button onclick="verificar()">Verificar disponibilidade</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        if (dist.value >= 25) {
+            div_msg.innerHTML = `A Pizza Rãti não entrega nesse endereço!`;
+        } else if (dist.value > 5){
+            div_msg.innerHTML = `A Pizza Rãti será entregue, porém o valor de entrega é de R$ 25,00`;
+        } else {
+            div_msg.innerHTML = `A Pizza Rãti será entregue e não custará nada para você :)`;
+        }
+    };
+</script>

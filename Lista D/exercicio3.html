@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h3>Historinha</h3>
+    <select id="inicio">
+        <option value="">Selecione um começo para sua historinha</option>
+        <option value="Uma vez...">Uma vez</option>
+        <option value="Num belo dia...">Num belo dia</option>
+        <option value="Numa noite chuvosa...">Numa noite chuvosa</option>
+    </select>
+    <select id="final">
+        <option value="">Selecione um final para sua historinha</option>
+        <option value="um peixe morreu afogado!">Um peixe morreu afogado</option>
+        <option value="um gato tomou um banho!">Um gato tomou um banho</option>
+        <option value="um corvo se curvou!">Um corvo se curvou</option>
+    </select>
+<br>
+    <button onclick="juntar()">Criar Historinha</button>
+</body>
+</html>
+
+<script>
+    function juntar(){
+        alert(`${inicio.value} ${final.value}`)
+};
+</script>

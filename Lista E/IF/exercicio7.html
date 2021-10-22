@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <h3>Dividindo a conta da Pizza</h3>
+    Entre com o valor da pizza
+    <input type="text" id="valor_pizza" placeholder="Preço da Pizza">
+<br>
+    Entre com a quantidade de amigos
+    <input type="text" id="qtd_amigos" placeholder="Quantidade de Amigos">
+<br><br>
+    <button onclick="calcular()">Rola a Pizza?</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var ax_media = valor_pizza.value / qtd_amigos.value;
+        
+        div_msg.innerHTML = `Cada amigo vai pagar R$ ${ax_media.toFixed(2)}`;
+
+        if (ax_media > 20){
+            div_msg.innerHTML += `<br><br><b> Deu ruim! Pizza muito cara!</b>`;
+        };
+    };
+</script>

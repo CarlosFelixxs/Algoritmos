@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <h3>Valor guardado: R$ <span id="atual">0,00</span></h3>
+<br>
+    <div id="div_msg"></div>
+<br><br>
+    <button onclick="mais5()">Guardar R$ 5.00</button>
+    <button onclick="menos10()">Gastar R$ 10.00</button>
+</body>
+</html>
+
+<script>
+    var ax_atual = Number(0);
+
+    function mais5(){
+        ax_atual = ax_atual + Number(5);
+        atual.innerHTML = `${ax_atual.toFixed(2)}`;
+        verificar()
+};
+    function menos10(){
+        ax_atual = ax_atual - 10;
+        atual.innerHTML = `${ax_atual.toFixed(2)}`;
+        verificar()
+};
+    function verificar(){
+        if (ax_atual > 100) {
+            div_msg.innerHTML = `Finanças OK!<br><br># Ostentação`;           
+        } else if (ax_atual >= 0){
+            div_msg.innerHTML = `Finanças OK!`;           
+        } else if (ax_atual >= -20) {
+            div_msg.innerHTML = `<span style="color: red;">Finanças em perigo</span>`;           
+        } else {
+            div_msg.innerHTML = `<span style="color: red;">Finanças em perigo</span><br><br>Quase um Corinthians!`;           
+        };
+};
+
+</script>

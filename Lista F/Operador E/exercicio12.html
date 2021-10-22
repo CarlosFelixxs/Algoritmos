@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <h3>Recarga do Cartão Fidelidade</h3>
+    Entre com a quantidade de passagens que deseja adquirir
+    <input type="text" id="passagens" placeholder="Quantidade de Passagens">
+<br><br>
+    <button onclick="comprar()">Comprar</button>
+<br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function comprar(){
+        if (passagens.value >= 8 && passagens.value <= 19) {
+            div_msg.innerHTML = `Total a pagar: R$ ${(passagens.value * 4.40 * 0.97).toFixed(2)}`;
+        } else if (passagens.value >= 20 && passagens.value <= 49) {
+        div_msg.innerHTML = `Total a pagar: R$ ${(passagens.value * 4.40 * 0.95).toFixed(2)}`;
+        } else if (passagens.value == 50) {
+        div_msg.innerHTML = `Total a pagar: R$ ${(passagens.value * 4.40 * 0.93).toFixed(2)}`;
+        } else {
+            div_msg.innerHTML = ``;
+            alert('Quantidade inválida para o Fidelidade!');
+        };
+    };
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <button id="start_button" onclick="game_start()"><h1>Iniciar Jogo</h1></button>
+    
+    <div id="div_game" style="display: none;">
+        <img onclick="golpear_player1()" src="https://static.wikia.nocookie.net/wwebrasil/images/1/16/Calaway.jpg/revision/latest?cb=20100207150200&path-prefix=pt-br" alt="Undertaker" style="height: 200px;">
+<br>
+        <div id="player1_hp" style="background-color: crimson; width: 100%; height: 30px;"></div>
+<br><br>
+        <img onclick="golpear_player2()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVSa8KRzKg7179zzw09Mgo5-fS469_c2VPmQ&usqp=CAU" style="height: 200px;">
+<br>        
+        <div id="player2_hp" style="background-color: crimson; width: 100%; height: 30px;"></div>
+<br><br>
+        Golpes sofridos pelo lutador 1: <b id="qtd_golpes1">0</b>
+<br>
+        Golpes sofridos pelo lutador 2: <b id="qtd_golpes2">0</b>
+    </div>
+</body>
+</html>
+
+<script>
+    var golpes1 = 0;
+    var golpes2 = 0;
+    var barra1 = 100;
+    var barra2 = 100;
+    
+
+    function game_start(){
+        start_button.style.display = 'none';
+        div_game.style.display = 'block';   
+    };
+    function golpear_player1(){
+        golpes1 ++;
+        qtd_golpes1.innerHTML = golpes1;
+        barra1 = barra1 - 5;
+        player1_hp.style.width = `${barra1}%`;
+    }; 
+    function golpear_player2(){
+        golpes2 ++;
+        qtd_golpes2.innerHTML = golpes2;
+        barra2 = barra2 - 5;
+        player2_hp.style.width = `${barra2}%`;
+    };
+</script>

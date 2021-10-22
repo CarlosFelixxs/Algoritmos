@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    <h3>Análise de Desempenho de Atacante</h3>
+    Entre com a quantidade de partidas jogadas
+    <input type="text" id="partidas" placeholder="Partidas Jogadas">
+<br>
+    Entre com a quantidade de gols marcados
+    <input type="text" id="gols" placeholder="Quantidade de Gols">
+<br><br>
+    <button onclick="analisar()">Estudar Atacante</button>
+<br><br>
+    <div id="div_msg"></div>
+<br><br>
+    <div id="div_media"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var ax_media = gols.value / partidas.value;
+        if (ax_media < 0.2){
+        div_msg.innerHTML = `Melhor mudar de posição`;
+    } else if (ax_media <= 0.6){
+        div_msg.innerHTML = `Atacante mediano`;
+    } else {
+        div_msg.innerHTML = `Atacante do futuro`;
+    };
+
+    div_media.innerHTML = `Sua média de gols/partida é de ${ax_media.toFixed(1)}`
+    };
+</script>

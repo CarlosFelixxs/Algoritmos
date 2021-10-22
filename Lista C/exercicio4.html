@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h3>Contagem de Cliques</h3>
+    Você já clicou <b id="cliques">0</b> vezes.
+<br><br>
+    <button onclick="clicado()">Clica nimim</button>
+</body>
+</html>
+
+<script>
+    var total_cliques = 0;
+
+    function clicado(){
+        total_cliques ++;
+        cliques.innerHTML = total_cliques;
+    };
+</script>

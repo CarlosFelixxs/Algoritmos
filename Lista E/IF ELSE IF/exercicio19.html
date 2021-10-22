@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <h3>Simulação de luta</h3>
+    <img id="p1" src="personagem1.png" alt="personagem 1" style="width: 300px;">
+    <div id="hp1" style="background-color: rgb(91, 155, 213); width: 300px; height: 25px;"></div>
+<br>
+    <img id="botao1" onclick="apanhar1()" src="botao_apanhar.png" alt="apanhar">
+<br><br>
+    <img id="p2" src="personagem2.png" alt="personagem 2" style="width: 300px;">
+    <div id="hp2" style="background-color: red; width: 300px; height: 25px;"></div>
+<br>
+    <img id="botao2" onclick="apanhar2()" src="botao_apanhar.png" alt="apanhar">
+<br><br>
+    <h3 id="ganhador"></h3>
+</body>
+</html>
+
+<script>
+    var ax_hp1 = 300;
+    var ax_hp2 = 300;
+
+    function apanhar1(){
+        ax_hp1 = ax_hp1 - 25;
+        hp1.style.width = ax_hp1 + 'px';
+        verificar_ganhador();
+    };
+    function apanhar2(){
+        ax_hp2 = ax_hp2 - 25;
+        hp2.style.width = ax_hp2 + 'px';
+        verificar_ganhador();
+    };
+    function verificar_ganhador(){
+        if (ax_hp1 == 0) {
+            p1.src = 'caixao.png';
+            ganhador.innerHTML = 'Raiden venceu!';
+            botao2.onclick = "";
+        } else if (ax_hp2 == 0) {
+            p2.src = 'caixao.png'
+            ganhador.innerHTML = 'Scorpion venceu!';
+            botao1.onclick = "";
+        };
+    };
+</script>
