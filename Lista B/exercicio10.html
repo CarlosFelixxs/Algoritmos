@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+    Entre com a quantidade de filhos com menos de 10 anos:
+    <input type="text" id="quant_filhos_men" placeholder="filhos com menos de 10 anos">
+    <br>
+    Entre com a quantidade de filhos a partir de 10 anos:
+    <input type="text" id="quant_filhos_mai" placeholder="filhos com 10 anos ou mais">
+    <br>
+    <button onclick="calc_aux()">Calcular Auxílio Filhos</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    function calc_aux() {
+        var ax_men = Number(quant_filhos_men.value * 30);
+        var ax_mai = Number(quant_filhos_mai.value * 20);
+        div_msg.innerHTML = `Você tem <b>${quant_filhos_men.value}</b> filhos menores de 10 anos e <b>${quant_filhos_mai.value}</b> filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de <b>R$${ax_men + ax_mai}.00</b>`
+    };
+</script>

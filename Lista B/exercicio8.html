@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+
+<body>
+    Entre com o salário:
+    <input type="text" id="salario" placeholder="salário">
+    <br>
+    <button onclick="calc_desc()">Calcular Descontos</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    function calc_desc() {
+        var ax_inss = Number(salario.value * 0.1);
+        var ax_ir = Number(salario.value * 0.2);
+        var ax_desc = ax_inss + ax_ir;
+
+        div_msg.innerHTML =
+            `Seus descontos serão de:<br>
+        INSS: <b>R$${ax_inss}</b><br>
+        IR: <b>R$${ax_ir}</b><br>
+        Total de descontos: <b>R$${ax_desc}</b><br>
+        Seu salário, após os descontos será de: <b><u></u>R$${salario.value - ax_desc}</b>`
+    };
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    Entre com a quantidade de horas sono dormidas:
+    <input type="text" id="quant_horas" placeholder="horas de sono dormidas">
+<br>
+    <button onclick="calc_sono()">Calcular Sono</button>
+<br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calc_sono(){
+    div_msg.innerHTML =
+    `Ao dormir <u>${quant_horas.value}</u> horas, você dormiu:<br>
+    <u>${quant_horas.value*0.05} horas na <b>na fase 1</b></u><br>
+    <u>${quant_horas.value*0.45} horas na <b>na fase 2</b></u><br>
+    <u>${quant_horas.value*0.3} horas na <b>na fase 3</b></u><br>
+    <u>${quant_horas.value*0.2} horas na <b>na fase REM</b></u><br>`
+};
+</script>

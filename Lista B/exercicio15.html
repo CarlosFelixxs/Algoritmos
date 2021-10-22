@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    Entre com a quantidade de votos no Zé Buduia nesta eleição:
+    <input type="text" id="voto_ze" placeholder="Votos no Zé Buduia">
+<br>
+    Entre com a quantidade de votos na Maria Bigodenha nesta eleição:
+    <input type="text" id="voto_maria" placeholder="Votos na Maria Bigodenha">
+<br>
+    Entre com a quantidade de votos <b>brancos</b> nesta eleição:
+    <input type="text" id="voto_branco" placeholder="Votos Brancos">
+<br>
+    Entre com a quantidade de votos <b>nulos</b> nesta eleição:
+    <input type="text" id="voto_nulo" placeholder="Votos Nulos">
+<br>
+    <button onclick="result_vot()">Resultado da Eleição</button>
+<br>
+    <div id="div_msg"></div>
+<br>
+    <div id="barra_ze" style="background-color: blue; float: left; width: 0%; height: 30px;"></div>
+    <div id="barra_maria" style="background-color: red; float: left; width: 0%; height: 30px;"></div>
+    <div id="barra_inv" style="background-color: black; float: left; width: 0%; height: 30px;"></div>
+</body>
+</html>
+
+<script>
+    function result_vot(){
+    var ax_num1 = Number(voto_ze.value) + Number(voto_maria.value) + Number(voto_branco.value) + Number(voto_nulo.value);
+    var ax_num2 = Number(voto_nulo.value) + Number(voto_branco.value);
+    div_msg.innerHTML =
+    `<b>Total de votos:</b> ${ax_num1}<br>
+    <b>Zé Buduia:</b> ${(voto_ze.value*100)/ax_num1}% (${voto_ze.value})<br>
+    <b>Maria Bigodenha</b> ${(voto_maria.value*100)/ax_num1}% (${voto_maria.value})<br>
+    <b>Inválidos</b>: ${(ax_num2*100)/ax_num1}% (${ax_num2})`
+    
+    barra_ze.style.width = `${(voto_ze.value*100)/ax_num1}%`
+    barra_maria.style.width = `${(voto_maria.value*100)/ax_num1}%`
+    barra_inv.style.width = `${(ax_num2*100)/ax_num1}%`
+};
+</script>
