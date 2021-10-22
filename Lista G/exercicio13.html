@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+</head>
+<body>
+    <b>De quantos em quantos dias você faz musculação</b>
+    <br>
+    <input id="qtd" type="number">
+    <br>
+    <button onclick="exibir()">Exibir rotina mensal</button>
+    <span id="spanmsg"></span>
+</body>
+</html>
+<script>
+    function exibir(){
+        var cont = 0;
+        var dia =1;
+        var quantidade = Number(qtd.value);
+
+        while (cont < 30){
+            if(cont % quantidade == 0) {
+                spanmsg.innerHTML += `<br>Dia ${dia} - Musculação<br>`;
+                cont ++;
+                dia ++;
+            }else {
+                spanmsg.innerHTML += `Dia ${dia} - Comer, dormir etc <br>`;
+                cont ++;
+                dia ++;
+            }
+        }
+    }
+</script>

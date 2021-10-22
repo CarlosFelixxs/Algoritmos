@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+
+<body>
+    <h2><b>Qual o nome do amor da sua vida?</b></h2>
+    <br><br>
+    <input id="amar" type="text">
+    <br><br>
+    <h2><b>O quanto você ama essa pessoa?</b></h2>
+    <input id="quanto">
+    <br><br>
+    <button onclick="expressar()">Expressar amor</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    function expressar() {
+        var zero = 0;
+        var amor = amar.value;
+        var quant = Number(quanto.value);
+        div_msg.innerHTML = '';
+        while (zero < quant) {
+            div_msg.innerHTML += `${amor} eu te amo! Sempre lembre disso! <br>`;
+            zero++;
+        }
+    }
+</script>
