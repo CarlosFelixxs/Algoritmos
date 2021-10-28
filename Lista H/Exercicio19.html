@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<lang="pt">
+
+    <head>
+        <meta charse-T="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cansomêtro</title>
+    </head>
+
+    <body style="background-color: lightgreen;text-align: center;">
+        <b>Quantos ônibus você precisa pegar?</b>
+        <br><br>
+        <input type="text" id="onibus"><br>
+        <b>Quantos trens você precisa pegar?</b>
+        <br><br>
+        <input type="text" id="trem"><br>
+        <b>Quantos metrôs você precisa pegar?</b>
+        <br><br>
+        <input type="text" id="metro"><br>
+        <br>
+        <button onclick="partiu()">#Partiu trajeto</button><br>
+        <div id="resultados"></div>
+    </body>
+
+    </html>
+    <script>
+        function partiu() {
+            var oni = Number(onibus.value);
+            var tre = Number(trem.value);
+            var metr = Number(metro.value);
+            var cont = 1;
+
+            while (cont <= oni) {
+                if (cont == 2) {
+                    resultados.innerHTML += (`<span style="color: red; font-weight: bold;">Pegando o ${cont}° Busão - Começando a Cançar</span><br>`);
+                } else {
+                    if (cont >= 2) {
+                        resultados.innerHTML += (`<span style="color: red; font-weight: bold;">Pegando o ${cont}° Busão - Já Cansado!</span><br>`);
+                    } else {
+                        resultados.innerHTML += (`<span style="color: red; font-weight: bold;">Pegando o ${cont}° Busão</span><br>`);
+                    }
+                }
+                cont++;
+            }
+            cont = 1;
+
+            while (cont <= tre) {
+                if (cont == 2) {
+                    resultados.innerHTML += (`<span style="color: green; font-weight: bold;">Pegando o ${cont}° Trem - Começando a Cançar</span><br>`);
+                } else {
+                    if (cont >= 2) {
+                        resultados.innerHTML += (`<span style="color: green; font-weight: bold;">Pegando o ${cont}° Trem - Já Cansado!</span><br>`);
+                    } else {
+                        resultados.innerHTML += (`<span style="color: green; font-weight: bold;">Pegando o ${cont}° Trem</span><br>`);
+                    }
+                }
+                cont++;
+            }
+            cont = 1;
+
+            while (cont <= metr) {
+                if (cont == 2) {
+                    resultados.innerHTML += (`<span style="color: blue; font-weight: bold;">Pegando o ${cont}° Metrô - Começando a Cançar</span><br>`);
+                } else {
+                    if (cont >= 2) {
+                        resultados.innerHTML += (`<span style="color: blue; font-weight: bold;">Pegando o ${cont}° Metrô - Já Cansado!</span><br>`);
+                    } else {
+                        resultados.innerHTML += (`<span style="color: blue; font-weight: bold;">Pegando o ${cont}° Metrô</span><br>`);
+                    }
+                }
+                cont++;
+            }
+            cont = 1;
+        }
+        </script>
