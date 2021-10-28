@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightgreen; align-items: center;text-align: center;">
+    <b>insira o numero de partida</b>
+    <br>
+    <input style="border-radius: 10px;" type="number" id="ip1">
+    <br>
+    <b>insira o numero final</b>
+    <br>
+    <input style="border-radius: 10px;" type="number" id="ip2">
+    <br>
+    <b>insira o numero para divisibilidade</b>
+    <br>
+    <input style="border-radius: 10px;" type="number" id="ip3">
+    <br><br>
+    <button style="background-color: black;color: white;border-radius: 10px;" onclick="clica()">clica</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function clica(){
+        msg.innerHTML = '';
+        var ipt = Number(ip1.value);
+        var ipt2 = Number(ip2.value);
+        var ipt3 = Number(ip3.value);
+        for(ipt ; ipt <= ipt2; ipt ++){
+            if (ipt % ipt3 ==  0) {
+            msg.innerHTML += `${ipt}<br>` 
+            }
+        }
+    }
+</script>
