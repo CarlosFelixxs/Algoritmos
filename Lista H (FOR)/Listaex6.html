@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <b>Insira um número</b>
+    <br>
+    <input type="number" id="numero">
+    <br>
+    <b>insira uma frase</b>
+    <br>
+    <input type="text" id="fra">
+    <br>
+    <button onclick="papa()">Papagaio</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function papa(){
+        var num = Number(numero.value);
+        var frase = fra.value;
+        for(var cont = 0; cont < num; cont ++){
+            alert(`${frase}`) 
+        }
+    }
+</script>

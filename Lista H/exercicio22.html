@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Insira a quantidade de números a ser sorteado.</b>
+    <br>
+    <input type="Number" id="sorteio">
+    <br>
+    <b>Insira a divisibilidade de deseja encontrar.</b>
+    <br>
+    <input type="Number" id="divisibilidade">
+    <br>
+    <button onclick="Sorte()">Sortear!</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    var num = Number(sorteio.value);
+    var divi = Number(divisibilidade.value)
+    var cont = 0;
+    function Sorte(){
+        msg.innerHTML = '';
+        cont++;
+        while (cont > num){
+        if(num > 10 && num <=50){
+        }else {
+            msg.innerHTML += 'O número tem que estar entre o número 10 e o número 50'
+        }}
+    }
+</script>

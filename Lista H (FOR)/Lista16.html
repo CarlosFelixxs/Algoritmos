@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+</head>
+<body>
+    <b>Quantos depósitos você fez no seu banco</b>
+    <br>
+    <input type="Number" id="quantidade">
+    <br>
+    <b>Valor dos depósitos</b>
+    <br>
+    <input type="Number" id="val">
+    <br>
+    <button onclick="acompanhar()">Acompanhar Grana</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function acompanhar(){
+        var quant = Number(quantidade.value);
+        var valor = Number(val.value);
+        var valo = valor *2;
+        for(var cont = 1; cont < quant; cont ++){
+            msg.innerHTML += `${quant} Mês: R$${valo}<br>`
+        }
+    }
+</script>

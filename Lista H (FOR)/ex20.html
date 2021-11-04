@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex20</title>
+</head>
+
+<body style="background-color:burlywood;text-align:center;align-items:center">
+    <button style="border-radius: 10px;background-color:bisque" onclick="sorte()">Ver Minha Sorte</button><br><br>
+    <div id="msg"></div>
+
+</body>
+
+</html>
+<script>
+
+    function sorte() {
+        var core = 0;
+        var carta = 0;
+        for (var cont = 1; cont <= 21; cont++) {
+            var math = Math.floor(Math.random() * 2 + 1);
+            if (math == 2) {
+                msg.innerHTML += (`<img style="width: 45px;" src="https://acegif.com/wp-content/uploads/gif-heart-69.gif">`);
+                core++;
+            } else {
+                msg.innerHTML += (`<img style="width: 45px;" src="https://www.imagensanimadas.com/data/media/632/jogo-imagem-animada-0008.gif">`);
+                carta++;
+            }
+
+            if (cont == 21) {
+                if (core > carta) {
+                    msg.innerHTML += `<br><br><h4>Você tem mais sorte no amor!!`;
+                } else {
+                    msg.innerHTML += `<br><br><h4>Você tem mais sorte no jogo!!`;
+
+                }
+            }
+        }
+    }
+</script>

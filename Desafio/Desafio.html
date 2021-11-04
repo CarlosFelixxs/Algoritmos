@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turfe</title>
+</head>
+
+<body>
+    <button style="background-color: lime; color: white;" onclick="largada()">Dar a largada</button>
+    <div id="cavalo"></div>
+</body>
+
+</html>
+<script>
+    function largada() {
+        for (var cont = 1; cont < 7 + 1; cont++) {
+            var num = Math.random();
+            var nume = `${(num * 2 + 7).toFixed(2.2)}`;
+            var num1 = Math.random();
+            var nume1 = `${(num1 * 2 + 7).toFixed(2.2)}`
+            var num2 = Math.random();
+            var nume2 = `${(num2 * 2 + 7).toFixed(2.2)}`
+            var voltas = `Volta 0${cont}`
+            cavalo.innerHTML += `<span style="text-decoration: underline;">${voltas}<br></span>
+            <br>`
+            cavalo.innerHTML +=
+             ` Cavalo1 -- ${(num * 2 + 7).toFixed(2.2)} -- 0${nume}`;
+            cavalo.innerHTML += 
+            ` Cavalo2 -- ${(num1 * 2 + 7).toFixed(2.2)} -- 0${nume1}`;
+            cavalo.innerHTML +=
+             ` Cavalo3 -- ${(num2 * 2 + 7).toFixed(2.2)} -- 0${nume2}<br>`; 
+        }
+        cavalo.innerHTML += 
+            `<br>Em 1º Lugar – Cavalo2<br>
+            Em 2º Lugar – Cavalo3<br>
+            Em 3º Lugar – Cavalo1<br>`
+    }
+</script>
